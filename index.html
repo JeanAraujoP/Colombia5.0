@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Colombia 5.0</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Space+Grotesk:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="estilo.css" />
+</head>
+
+<body>
+
+  <!-- ══ HEADER ══ -->
+  <header class="site-header">
+    <a href="#" class="nav-logo">COLOMBIA <span>5.0</span></a>
+  </header>
+
+  <!-- ══ NAV ══ -->
+  <nav>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#inicio" data-i18n="nav_home">Inicio</a></li>
+      <li><a href="#conferencia" data-i18n="nav_conference">Conferencia</a></li>
+      <li><a href="#temas" data-i18n="nav_topics">Temas</a></li>
+      <li><a href="#galeria" data-i18n="nav_gallery">Galería</a></li>
+      <li><a href="#glosario" data-i18n="nav_glossary">Glosario</a></li>
+      <li><a href="#conclusion" data-i18n="nav_conclusion">Conclusión</a></li>
+    </ul>
+
+    <div class="lang-toggle">
+      <button class="lang-btn active" onclick="setLang('es')">ES</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+    </div>
+
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ══ HERO ══ -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg"></div>
+
+    <div class="hero-left hero-content">
+      <div class="hero-eyebrow" data-i18n="hero_event">EVENTO ACADÉMICO INTERNACIONAL</div>
+
+      <h1>
+        <span data-i18n="hero_title_intro">Introducción</span><br />
+        <span data-i18n="hero_title_to">a</span> <span class="accent">Colombia</span><br />
+        <span class="yellow">5.0</span>
+      </h1>
+
+      <p class="hero-desc" data-i18n="hero_desc">
+        Un espacio de reflexión académica donde tecnología, ética y sociedad convergen para imaginar el futuro digital de Colombia.
+      </p>
+
+      <div class="hero-btns animate-in delay-4">
+        <a href="#conferencia" class="btn-primary" data-i18n="btn_conferences">Ver conferencias →</a>
+        <a href="#temas" class="btn-outline" data-i18n="btn_topics">Explorar temas</a>
+      </div>
+    </div>
+
+    <div class="hero-right animate-in delay-2">
+      <div class="hero-image-wrap">
+        <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=900&q=80" alt="Colombia 5.0 — Evento" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ ACERCA DEL EVENTO ══ -->
+  <section class="about-section" id="acerca">
+    <h2 class="section-title">
+      <span data-i18n="about_title_pre">¿Qué es</span>
+      <span style="color:var(--morado)"> Colombia 5.0</span>
+      <span data-i18n="about_title_post">?</span>
+    </h2>
+    <p class="section-subtitle" data-i18n="about_event">
+      Colombia 5.0 es un encuentro académico que reúne investigadores, estudiantes y líderes
+      para explorar cómo la tecnología, la ética y la sociedad se entrelazan en la nueva
+      revolución industrial que se avecina.
+    </p>
+  </section>
+
+  <!-- ══ TEMAS PRINCIPALES ══ -->
+  <section id="temas">
+    <h2 class="section-title">
+      <span data-i18n="topics_title">Temas</span>
+      <span style="color:var(--verde)"> <span data-i18n="topics_title2">Principales</span></span>
+    </h2>
+    <p class="section-subtitle" data-i18n="topics_desc">
+      Los ejes temáticos que guían el debate en Colombia 5.0 abarcan desde
+      inteligencia artificial hasta sostenibilidad y gobernanza digital.
+    </p>
+
+    <div class="topics-grid">
+      <a href="#game-ui" class="topic-card observe">
+        <h3 data-i18n="topic1_title">Game UI Systems</h3>
+        <p data-i18n="topic1_desc">De pantalla a interfaces que funcionan: cómo los sistemas de UI en videojuegos han evolucionado para convertirse en interfaces funcionales, accesibles y de alto rendimiento.</p>
+        <div class="topic-tags">
+          <span class="tag">UI/UX</span>
+          <span class="tag">HUD</span>
+          <span class="tag">Accessibility</span>
+          <span class="tag yellow">Game Dev</span>
+        </div>
+      </a>
+
+      <a href="#cybersec" class="topic-card observe">
+        <h3 data-i18n="topic2_title">Ciberseguridad en Apps</h3>
+        <p data-i18n="topic2_desc">Protegiendo las aplicaciones del futuro: estrategias, herramientas y buenas prácticas para garantizar la seguridad en el desarrollo de software moderno.</p>
+        <div class="topic-tags">
+          <span class="tag">OWASP</span>
+          <span class="tag">Encryption</span>
+          <span class="tag">Pentesting</span>
+          <span class="tag yellow">Zero Trust</span>
+        </div>
+      </a>
+
+      <a href="#glosario" class="topic-card observe">
+        <h3 style="color: var(--acento);" data-i18n="topic3_title">Glosario</h3>
+        <p data-i18n="topic3_desc">30 términos técnicos en inglés con traducción y definición aprendidos durante el evento.</p>
+        <div class="topic-tags">
+          <span class="tag" data-i18n="tag_terms">30 términos</span>
+          <span class="tag yellow" data-i18n="tag_bilingual">Bilingüe</span>
+        </div>
+      </a>
+
+      <a href="#conclusion" class="topic-card observe">
+        <h3 style="color: var(--acento);" data-i18n="topic4_title">Conclusión &amp; Ética</h3>
+        <p data-i18n="topic4_desc">Reflexión sobre IA, automatización y responsabilidad profesional en el desarrollo de software.</p>
+        <div class="topic-tags">
+          <span class="tag" data-i18n="tag_ai_ethics">IA Ética</span>
+          <span class="tag" data-i18n="tag_data">Datos</span>
+          <span class="tag yellow" data-i18n="tag_society">Sociedad</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ══ CONFERENCIA ══ -->
+  <section style="background: var(--fondo2);" id="conferencia">
+    <div class="section-inner">
+      <p class="section-tag" data-i18n="conf_tag">Programa académico</p>
+      <div class="divider"></div>
+      <h2 class="section-title" data-i18n="conf_title">Conferencias</h2>
+      <p class="section-subtitle" data-i18n="conf_subtitle">Ponencias seleccionadas del evento Colombia 5.0.</p>
+
+      <!-- ── CONFERENCIA 1: GAME UI ── -->
+      <div class="conf-card observe" id="game-ui">
+        <div class="conf-header">
+          <div class="conf-number">01</div>
+          <div class="conf-meta">
+            <h2 data-i18n="conf1_title">Game UI Systems: De Pantalla a Interfaces que Funcionan</h2>
+            <p class="speaker" data-i18n="conf1_speaker">Conferencista: Ing. Carlos Medina · UX Lead, Gaming Studio Bogotá</p>
+            <div class="topic-tags">
+              <span class="tag">UI Design</span>
+              <span class="tag">HUD Systems</span>
+              <span class="tag">Accessibility</span>
+              <span class="tag yellow">Game Development</span>
+              <span class="tag yellow">UX Engineering</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="conf-body">
+          <h4 data-i18n="main_topic_label">Tema Principal / Main Topic</h4>
+          <p data-i18n="conf1_main_topic">Evolución de los sistemas de interfaz gráfica de usuario en videojuegos y su aplicación en software empresarial moderno.</p>
+
+          <div class="content-tabs" style="margin-top: 1.5rem;">
+            <button class="content-tab active" data-target="conf1-es" data-i18n="tab_es">🇨🇴 Español</button>
+            <button class="content-tab" data-target="conf1-en" data-i18n="tab_en">🇺🇸 English</button>
+          </div>
+
+          <div class="lang-content active" data-lang="conf1-es">
+            <h4 data-i18n="summary_label_es">Resumen</h4>
+            <p>La conferencia "Game UI Systems: De Pantalla a Interfaces que Funcionan" exploró en profundidad cómo los principios de diseño de interfaz nacidos en la industria de los videojuegos han migrado y transformado el desarrollo de software empresarial y de aplicaciones del mundo real. El ponente demostró que elementos como el HUD (Heads-Up Display), los sistemas de feedback visual, la representación de datos en tiempo real y la accesibilidad dentro de los juegos no son únicamente herramientas de entretenimiento, sino metodologías probadas de comunicación entre la máquina y el usuario.</p>
+            <p style="margin-top: 1rem;">Se abordaron conceptos clave como el diseño diegético —interfaces que existen dentro del mundo del juego y que el personaje puede ver y tocar— versus el diseño no diegético, que sólo el jugador percibe. Esta distinción resulta fundamental para comprender cómo los sistemas modernos de dashboards industriales, monitores médicos y aplicaciones de control de tráfico aéreo han adoptado principios directamente de la industria del videojuego. La charla concluyó con una demostración de herramientas como Unity UI Toolkit y Unreal Motion Graphics.</p>
+            <h4 data-i18n="reflection_label_es">Reflexión</h4>
+            <p>Esta conferencia cambió mi perspectiva sobre los videojuegos: ya no los veo como simple entretenimiento, sino como laboratorios de diseño de interacción humano-computador. Las soluciones que los diseñadores de juego deben encontrar —comunicar mucha información en poco espacio, sin distraer al usuario, manteniendo fluidez— son exactamente los mismos desafíos que enfrentamos en aplicaciones de misión crítica.</p>
+          </div>
+
+          <div class="lang-content" data-lang="conf1-en">
+            <h4 data-i18n="summary_label_en">Summary</h4>
+            <p>The conference "Game UI Systems: From Screen to Functional Interfaces" explored in depth how UI design principles born in the video game industry have migrated and transformed enterprise software and real-world application development. The speaker demonstrated that elements such as the HUD (Heads-Up Display), visual feedback systems, real-time data representation, and in-game accessibility are not merely entertainment tools, but proven methodologies for human-machine communication.</p>
+            <p style="margin-top: 1rem;">Key concepts were addressed such as diegetic design—interfaces that exist within the game world that the character can see and touch—versus non-diegetic design, which only the player perceives. This distinction is fundamental to understanding how modern industrial dashboard systems, medical monitors, and air traffic control applications have adopted principles directly from the video game industry. The talk concluded with a demonstration of tools like Unity UI Toolkit and Unreal Motion Graphics.</p>
+            <h4 data-i18n="reflection_label_en">Reflection</h4>
+            <p>This conference changed my perspective on video games: I no longer see them as simple entertainment, but as human-computer interaction design laboratories. The solutions that game designers must find—communicating a lot of information in little space, without distracting the user, while maintaining fluidity—are exactly the same challenges we face in mission-critical applications.</p>
+          </div>
+
+          <h4 style="margin-top: 2rem;" data-i18n="keywords_label">Palabras Clave / Keywords</h4>
+          <div class="keywords-cloud">
+            <span class="tag">HUD</span>
+            <span class="tag">Diegetic UI</span>
+            <span class="tag">UX Engineering</span>
+            <span class="tag">Feedback Loop</span>
+            <span class="tag yellow">Unity UI Toolkit</span>
+            <span class="tag">Unreal Engine</span>
+            <span class="tag yellow">Accessibility</span>
+            <span class="tag">Motion Graphics</span>
+            <span class="tag">Information Hierarchy</span>
+            <span class="tag">Real-time Rendering</span>
+          </div>
+
+          <h4 style="margin-top: 2rem;" data-i18n="multimedia_label">Contenido Multimedia / Multimedia</h4>
+          <div class="media-grid">
+            <div class="video-embed">
+              <iframe src="/VIDEO/charla.mp4" title="Game UI Design Principles" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-embed">
+              <iframe src="/VIDEO/continuacion.mp4" title="Unity UI Toolkit Tutorial" allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── CONFERENCIA 2: CIBERSEGURIDAD ── -->
+      <div class="conf-card observe" id="cybersec" style="margin-top: 3rem;">
+        <div class="conf-header">
+          <div class="conf-number">02</div>
+          <div class="conf-meta">
+            <h2 data-i18n="conf2_title">Ciberseguridad en las Aplicaciones: Blindando el Software del Futuro</h2>
+            <p class="speaker" data-i18n="conf2_speaker">Conferencista: Dra. Valentina Ríos · CISO, CyberColombia Labs</p>
+            <div class="topic-tags">
+              <span class="tag">OWASP Top 10</span>
+              <span class="tag">Pentesting</span>
+              <span class="tag">Zero Trust</span>
+              <span class="tag yellow">Secure Dev</span>
+              <span class="tag yellow">Encryption</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="conf-body">
+          <h4 data-i18n="main_topic_label">Tema Principal / Main Topic</h4>
+          <p data-i18n="conf2_main_topic">Estrategias y herramientas de ciberseguridad aplicadas al desarrollo de aplicaciones modernas, con enfoque en las amenazas más frecuentes y cómo mitigarlas desde el código.</p>
+
+          <div class="content-tabs" style="margin-top: 1.5rem;">
+            <button class="content-tab active" data-target="conf2-es" data-i18n="tab_es">🇨🇴 Español</button>
+            <button class="content-tab" data-target="conf2-en" data-i18n="tab_en">🇺🇸 English</button>
+          </div>
+
+          <div class="lang-content active" data-lang="conf2-es">
+            <h4 data-i18n="summary_label_es">Resumen</h4>
+            <p>La Dra. Valentina Ríos presentó una conferencia magistral sobre el estado actual de la ciberseguridad en el desarrollo de aplicaciones, destacando que el 95% de las vulnerabilidades exitosas explotan fallos que ya están documentados y tienen solución conocida. Utilizando el marco de referencia OWASP Top 10, la conferencista recorrió las diez categorías de riesgo más críticas para el software web y móvil: desde inyección SQL y scripting entre sitios (XSS), hasta fallos de configuración de seguridad y exposición de datos sensibles.</p>
+            <p style="margin-top: 1rem;">Un punto central fue la presentación del modelo Zero Trust Security, que abandona el concepto tradicional de "confiar en todo lo que está dentro de la red" y lo reemplaza por el principio de "nunca confíes, siempre verifica". La ponente demostró en vivo cómo un atacante puede explotar una API mal asegurada en menos de 3 minutos usando herramientas disponibles públicamente. La solución propuesta fue implementar DevSecOps: integrar la seguridad desde la primera línea de código.</p>
+            <h4 data-i18n="reflection_label_es">Reflexión</h4>
+            <p>La conferencia me hizo comprender que la seguridad no es un producto que se agrega al final; es una mentalidad que debe estar presente desde el diseño. Como futuros desarrolladores de software, tenemos la responsabilidad de proteger los datos de millones de usuarios colombianos que confían en las aplicaciones que construimos.</p>
+          </div>
+
+          <div class="lang-content" data-lang="conf2-en">
+            <h4 data-i18n="summary_label_en">Summary</h4>
+            <p>Dr. Valentina Ríos delivered a masterclass on the current state of cybersecurity in application development, highlighting that 95% of successful vulnerabilities exploit flaws that are already documented and have known solutions. Using the OWASP Top 10 framework, the speaker walked through the ten most critical risk categories for web and mobile software: from SQL injection and cross-site scripting (XSS), to security misconfiguration and sensitive data exposure.</p>
+            <p style="margin-top: 1rem;">A central point was the presentation of the Zero Trust Security model, which abandons the traditional concept of "trust everything inside the network" and replaces it with the principle of "never trust, always verify." The speaker demonstrated live how an attacker can exploit a poorly secured API in less than 3 minutes using publicly available tools. The proposed solution was to implement DevSecOps: integrating security from the first line of code.</p>
+            <h4 data-i18n="reflection_label_en">Reflection</h4>
+            <p>The conference made me understand that security is not a product added at the end; it is a mindset that must be present from the design stage. As future software developers, we have the responsibility to protect the data of millions of Colombian users who trust the applications we build.</p>
+          </div>
+
+          <h4 style="margin-top: 2rem;" data-i18n="keywords_label">Palabras Clave / Keywords</h4>
+          <div class="keywords-cloud">
+            <span class="tag">OWASP</span>
+            <span class="tag">Zero Trust</span>
+            <span class="tag">SQL Injection</span>
+            <span class="tag">XSS</span>
+            <span class="tag yellow">DevSecOps</span>
+            <span class="tag">Encryption</span>
+            <span class="tag yellow">Pentesting</span>
+            <span class="tag">API Security</span>
+            <span class="tag">Threat Modeling</span>
+            <span class="tag">Authentication</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ GALERÍA ══ -->
+  <section id="galeria">
+    <div class="section-inner">
+      <p class="section-tag" data-i18n="gallery_tag">Momentos del evento</p>
+      <div class="divider"></div>
+      <h2 class="section-title" data-i18n="gallery_title">Galería</h2>
+      <p class="section-subtitle" data-i18n="gallery_subtitle">Imágenes representativas de Colombia 5.0.</p>
+
+      <div class="gallery-full observe">
+        <div class="gallery-item wide" onclick="abrirLightbox(this)">
+          <img src="barras.png" alt="Auditorio principal Colombia 5.0" />
+          <div class="overlay"><span class="overlay-text" data-i18n="gallery1">Auditorio Principal · Colombia 5.0</span></div>
+        </div>
+        <div class="gallery-item" onclick="abrirLightbox(this)">
+          <img src="conoce.png" alt="Panel de expertos" />
+          <div class="overlay"><span class="overlay-text" data-i18n="gallery2">Panel de Expertos</span></div>
+        </div>
+        <div class="gallery-item" onclick="abrirLightbox(this)">
+          <img src="criticas.png" alt="Sesión de Game UI Systems" />
+          <div class="overlay"><span class="overlay-text" data-i18n="gallery3">Game UI Session</span></div>
+        </div>
+        <div class="gallery-item" onclick="abrirLightbox(this)">
+          <img src="enfoque.png" alt="Conferencia de ciberseguridad" />
+          <div class="overlay"><span class="overlay-text" data-i18n="gallery4">Cybersecurity Talk</span></div>
+        </div>
+        <div class="gallery-item" onclick="abrirLightbox(this)">
+          <img src="escenario.png" alt="Networking Colombia 5.0" />
+          <div class="overlay"><span class="overlay-text" data-i18n="gallery5">Networking Session</span></div>
+        </div>
+        <div class="gallery-item wide" onclick="abrirLightbox(this)">
+          <img src="infraestructura.png" alt="Talleres técnicos" />
+          <div class="overlay"><span class="overlay-text" data-i18n="gallery6">Talleres Técnicos · Día 1</span></div>
+        </div>
+        <div class="gallery-item" onclick="abrirLightbox(this)">
+          <img src="minibase.png" alt="Demo de interfaces de videojuegos" />
+          <div class="overlay"><span class="overlay-text" data-i18n="gallery7">UI/UX Demo · Game Dev</span></div>
+        </div>
+        <div class="gallery-item" onclick="abrirLightbox(this)">
+          <img src="pantalla.png" alt="Laboratorio de seguridad en apps" />
+          <div class="overlay"><span class="overlay-text" data-i18n="gallery8">App Security Lab</span></div>
+        </div>
+        <div class="gallery-item" onclick="abrirLightbox(this)">
+          <img src="seguridad.png" alt="Estudiantes SENA en Colombia 5.0" />
+          <div class="overlay"><span class="overlay-text" data-i18n="gallery9">Estudiantes SENA</span></div>
+        </div>
+        <div class="gallery-item" onclick="abrirLightbox(this)">
+          <img src="uisystems.png" alt="Live coding session" />
+          <div class="overlay"><span class="overlay-text" data-i18n="gallery10">Live Coding Session</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ LIGHTBOX ══ -->
+  <div id="lightbox" class="lightbox" onclick="cerrarLightbox()">
+    <button class="lightbox-close" onclick="cerrarLightbox()">✕</button>
+    <img id="lightbox-img" src="" alt="" onclick="event.stopPropagation()" />
+  </div>
+
+  <!-- ══ GLOSARIO ══ -->
+  <section id="glosario" style="background: var(--fondo2);">
+    <div class="section-inner">
+      <div class="divider"></div>
+      <h2 class="section-title" data-i18n="gloss_title">Glosario</h2>
+
+      <div class="glossary-search">
+        <input type="text" id="glossSearch" placeholder="Buscar término..." data-i18n-placeholder="gloss_search_placeholder" oninput="filterGlossary()" />
+      </div>
+
+      <div style="overflow-x: auto;" class="observe">
+        <table class="glossary-table" id="glossTable">
+          <thead>
+            <tr>
+              <th data-i18n="gloss_col_en">English</th>
+              <th data-i18n="gloss_col_es">Español</th>
+              <th data-i18n="gloss_col_def">Definición</th>
+            </tr>
+          </thead>
+          <tbody id="glossary-body">
+            <!-- GAME UI TERMS -->
+            <tr class="glossary-row">
+              <td><span class="word-en">HUD (Heads-Up Display)</span></td>
+              <td><span class="word-es">Pantalla de información superpuesta</span></td>
+              <td data-i18n="def_hud">Capa de interfaz gráfica que muestra información al usuario en tiempo real sin interrumpir la experiencia principal, como barras de vida o mapas en videojuegos.</td>
+            </tr>
+            <tr class="glossary-row">
+              <td><span class="word-en">Diegetic UI</span></td>
+              <td><span class="word-es">Interfaz diegética</span></td>
+              <td data-i18n="def_diegetic">Elemento de interfaz que existe dentro del mundo ficticio del juego, visible tanto para el personaje como para el jugador (ej. un reloj en la mano del personaje).</td>
+            </tr>
+            <tr class="glossary-row">
+              <td><span class="word-en">Non-Diegetic UI</span></td>
+              <td><span class="word-es">Interfaz no diegética</span></td>
+              <td data-i18n="def_nondiegetic">Elementos de interfaz que solo el jugador puede ver y que no forman parte del mundo del juego, como menús, puntuaciones y barras de estado.</td>
+            </tr>
+            <tr class="glossary-row">
+              <td><span class="word-en">Widget</span></td>
+              <td><span class="word-es">Componente de interfaz</span></td>
+              <td data-i18n="def_widget">Elemento individual reutilizable de una interfaz gráfica, como un botón, barra deslizante o cuadro de texto, que puede configurarse y combinarse para construir UIs.</td>
+            </tr>
+            <tr class="glossary-row">
+              <td><span class="word-en">Wireframe</span></td>
+              <td><span class="word-es">Esquema de interfaz</span></td>
+              <td data-i18n="def_wireframe">Boceto simplificado y de baja fidelidad que muestra la estructura y disposición de los elementos de una interfaz antes del diseño visual final.</td>
+            </tr>
+            <tr class="glossary-row">
+              <td><span class="word-en">UX (User Experience)</span></td>
+              <td><span class="word-es">Experiencia de usuario</span></td>
+              <td data-i18n="def_ux">Conjunto de sensaciones, percepciones y respuestas que tiene una persona al interactuar con un producto o sistema digital, abarcando usabilidad, accesibilidad y satisfacción.</td>
+            </tr>
+            <tr class="glossary-row">
+              <td><span class="word-en">UI (User Interface)</span></td>
+              <td><span class="word-es">Interfaz de usuario</span></td>
+              <td data-i18n="def_ui">Capa visual e interactiva de una aplicación mediante la cual el usuario se comunica con el sistema, incluyendo botones, menús, íconos y cualquier elemento gráfico interactivo.</td>
+            </tr>
+            <tr class="glossary-row">
+              <td><span class="word-en">Responsive Design</span></td>
+              <td><span class="word-es">Diseño responsivo</span></td>
+              <td data-i18n="def_responsive">Técnica de diseño web que permite que una interfaz se adapte automáticamente a distintos tamaños de pantalla, desde teléfonos móviles hasta monitores de escritorio.</td>
+            </tr>
+            <tr class="glossary-row">
+              <td><span class="word-en">Motion Graphics</span></td>
+              <td><span class="word-es">Gráficos en movimiento</span></td>
+              <td data-i18n="def_motion">Piezas de animación gráfica utilizadas en interfaces y videos para comunicar información, guiar la atención del usuario o mejorar la experiencia visual.</td>
+            </tr>
+            <tr class="glossary-row">
+              <td><span class="word-en">Accessibility (a11y)</span></td>
+              <td><span class="word-es">Accesibilidad</span></td>
+              <td data-i18n="def_a11y">Práctica de diseñar interfaces usables por personas con diversas capacidades, incluyendo discapacidades visuales, auditivas o motoras, siguiendo estándares como WCAG.</td>
+            </tr>
+            <tr class="glossary-row">
+              <td><span class="word-en">Rendering Pipeline</span></td>
+              <td><span class="word-es">Canal de renderizado</span></td>
+              <td data-i18n="def_pipeline">Secuencia de etapas de procesamiento que transforma datos 3D en una imagen 2D final en pantalla, fundamental en motores de juego y aplicaciones gráficas.</td>
+            </tr>
+            <tr class="glossary-row">
+              <td><span class="word-en">Game Engine</span></td>
+              <td><span class="word-es">Motor de videojuego</span></td>
+              <td data-i18n="def_engine">Software de desarrollo que proporciona herramientas para crear videojuegos y aplicaciones interactivas, como Unity o Unreal Engine, incluyendo físicas, gráficos y audio.</td>
+            </tr>
+            <tr class="glossary-row">
+              <td><span class="word-en">Feedback Loop</span></td>
+              <td><span class="word-es">Ciclo de retroalimentación</span></td>
+              <td data-i18n="def_feedback">Mecanismo en el que el sistema responde a las acciones del usuario con señales visuales, sonoras o hápticas que confirman o corrigen su comportamiento.</td>
+            </tr>
+            <tr class="glossary-row">
+              <td><span class="word-en">Prototype</span></td>
+              <td><span class="word-es">Prototipo</span></td>
+              <td data-i18n="def_prototype">Versión funcional preliminar de un producto o interfaz creada para probar conceptos, flujos y usabilidad antes de desarrollar la versión definitiva.</td>
+            </tr>
+            <tr class="glossary-row">
+              <td><span class="word-en">Sprite</span></td>
+              <td><span class="word-es">Imagen 2D animable</span></td>
+              <td data-i18n="def_sprite">Gráfico bidimensional utilizado en videojuegos e interfaces para representar personajes, íconos o elementos visuales que pueden animarse mediante secuencias de cuadros.</td>
+            </tr>
+            <!-- CYBERSECURITY TERMS -->
+            <tr class="glossary-row">
+              <td><span class="word-en">OWASP</span></td>
+              <td><span class="word-es">Proyecto de Seguridad en Aplicaciones Web Abiertas</span></td>
+              <td data-i18n="def_owasp">Organización sin fines de lucro que publica guías y herramientas de ciberseguridad, incluyendo el OWASP Top 10, lista de las vulnerabilidades más críticas en aplicaciones web.</td>
+            </tr>
+            <tr class="glossary-row">
+              <td><span class="word-en">Zero Trust</span></td>
+              <td><span class="word-es">Confianza cero</span></td>
+              <td data-i18n="def_zerotrust">Modelo de seguridad que no confía automáticamente en ningún usuario o dispositivo dentro o fuera de la red, requiriendo verificación continua de identidad y autorización.</td>
+            </tr>
+            <tr class="glossary-row">
+              <td><span class="word-en">Encryption</span></td>
+              <td><span class="word-es">Cifrado</span></td>
+              <td data-i18n="def_encryption">Proceso de transformar datos legibles en un formato ilegible usando algoritmos matemáticos, de modo que solo quienes posean la clave correcta puedan descifrarlos.</td>
+            </tr>
+            <tr class="glossary-row">
+              <td><span class="word-en">SQL Injection</span></td>
+              <td><span class="word-es">Inyección SQL</span></td>
+              <td data-i18n="def_sqli">Ataque de seguridad en el que el atacante inserta código SQL malicioso en campos de entrada de una aplicación para manipular o acceder a la base de datos sin autorización.</td>
+            </tr>
+            <tr class="glossary-row">
+              <td><span class="word-en">XSS (Cross-Site Scripting)</span></td>
+              <td><span class="word-es">Scripting entre sitios</span></td>
+              <td data-i18n="def_xss">Vulnerabilidad web que permite a un atacante inyectar scripts maliciosos en páginas vistas por otros usuarios, robando cookies, sesiones o redirigiendo a sitios fraudulentos.</td>
+            </tr>
+            <tr class="glossary-row">
+              <td><span class="word-en">Pentesting (Penetration Testing)</span></td>
+              <td><span class="word-es">Pruebas de penetración</span></td>
+              <td data-i18n="def_pentest">Práctica de simular ataques cibernéticos controlados sobre un sistema para identificar vulnerabilidades antes de que actores maliciosos las exploten.</td>
+            </tr>
+            <tr class="glossary-row">
+              <td><span class="word-en">DevSecOps</span></td>
+              <td><span class="word-es">Desarrollo, Seguridad y Operaciones</span></td>
+              <td data-i18n="def_devsecops">Metodología que integra prácticas de seguridad en cada etapa del ciclo de desarrollo de software, haciendo la seguridad responsabilidad de todo el equipo.</td>
+            </tr>
+            <tr class="glossary-row">
+              <td><span class="word-en">Firewall</span></td>
+              <td><span class="word-es">Cortafuegos</span></td>
+              <td data-i18n="def_firewall">Sistema de seguridad que monitorea y controla el tráfico de red entrante y saliente según reglas predefinidas, actuando como barrera entre redes confiables y no confiables.</td>
+            </tr>
+            <tr class="glossary-row">
+              <td><span class="word-en">Authentication</span></td>
+              <td><span class="word-es">Autenticación</span></td>
+              <td data-i18n="def_auth">Proceso de verificar la identidad de un usuario, dispositivo o sistema antes de concederle acceso a un recurso, utilizando contraseñas, biometría, tokens u otros métodos.</td>
+            </tr>
+            <tr class="glossary-row">
+              <td><span class="word-en">API (Application Programming Interface)</span></td>
+              <td><span class="word-es">Interfaz de Programación de Aplicaciones</span></td>
+              <td data-i18n="def_api">Conjunto de reglas y protocolos que permite que diferentes aplicaciones se comuniquen entre sí, facilitando el intercambio de datos y funcionalidades de forma estandarizada.</td>
+            </tr>
+            <tr class="glossary-row">
+              <td><span class="word-en">Vulnerability</span></td>
+              <td><span class="word-es">Vulnerabilidad</span></td>
+              <td data-i18n="def_vuln">Debilidad o fallo en un sistema, software o proceso que puede ser explotado por un atacante para comprometer la confidencialidad, integridad o disponibilidad de la información.</td>
+            </tr>
+            <tr class="glossary-row">
+              <td><span class="word-en">Token</span></td>
+              <td><span class="word-es">Ficha de acceso</span></td>
+              <td data-i18n="def_token">Cadena de datos generada por un servidor que actúa como credencial de acceso temporal, usada comúnmente en sistemas de autenticación como OAuth y JWT.</td>
+            </tr>
+            <tr class="glossary-row">
+              <td><span class="word-en">Cloud Computing</span></td>
+              <td><span class="word-es">Computación en la nube</span></td>
+              <td data-i18n="def_cloud">Modelo de entrega de servicios informáticos a través de internet, permitiendo escalar recursos bajo demanda sin infraestructura local.</td>
+            </tr>
+            <tr class="glossary-row">
+              <td><span class="word-en">Malware</span></td>
+              <td><span class="word-es">Software malicioso</span></td>
+              <td data-i18n="def_malware">Cualquier programa diseñado con la intención de dañar, robar datos o tomar control de sistemas sin el consentimiento del usuario, incluyendo virus, ransomware y spyware.</td>
+            </tr>
+            <tr class="glossary-row">
+              <td><span class="word-en">Threat Modeling</span></td>
+              <td><span class="word-es">Modelado de amenazas</span></td>
+              <td data-i18n="def_threat">Proceso estructurado de identificar, analizar y priorizar posibles amenazas de seguridad a un sistema, utilizado para diseñar contramedidas antes de que ocurra un ataque.</td>
+            </tr>
+            <tr class="glossary-row">
+              <td><span class="word-en">Open Source</span></td>
+              <td><span class="word-es">Código abierto</span></td>
+              <td data-i18n="def_opensource">Software cuyo código fuente es público y puede ser libremente usado, modificado y distribuido por cualquier persona, fomentando la colaboración y la transparencia.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CONCLUSIÓN ══ -->
+  <section id="conclusion">
+    <div class="section-inner">
+      <p class="section-tag" data-i18n="concl_tag">Reflexión final</p>
+      <div class="divider"></div>
+      <h2 class="section-title" data-i18n="concl_title">Conclusión</h2>
+
+      <div class="content-tabs observe">
+        <button class="content-tab active" data-target="concl-es" data-i18n="tab_es">🇨🇴 Español</button>
+        <button class="content-tab" data-target="concl-en" data-i18n="tab_en">🇺🇸 English</button>
+      </div>
+
+      <!-- ESPAÑOL -->
+      <div class="lang-content active observe" data-lang="concl-es">
+        <div class="conclusion-block" style="margin-top: 1.5rem;">
+          <h3 class="concl-question">¿Cómo se implementa la ética en la tecnología empresarial?</h3>
+
+          <p class="concl-p-main">
+            Colombia 5.0 nos dejó una certeza que va más allá de las herramientas y los lenguajes de programación: <strong style="color: var(--amarillo);">la tecnología sin ética es simplemente poder sin responsabilidad</strong>. Las dos conferencias que tuve el privilegio de presenciar —sobre Game UI Systems y Ciberseguridad en Aplicaciones— tocaron, desde ángulos distintos, la misma fibra fundamental.
+          </p>
+
+          <p class="concl-p-sec">
+            En el campo del diseño de interfaces para videojuegos, la accesibilidad dejó de ser una opción para convertirse en un imperativo. Cuando una interfaz mal diseñada excluye a personas con daltonismo, discapacidades motrices o cognitivas, no es un error de programación, es un fracaso ético.
+          </p>
+
+          <p class="concl-p-sec">
+            En ciberseguridad, la reflexión es aún más urgente. Cada aplicación que desarrollamos almacena datos reales de personas reales: direcciones, información médica, datos financieros. La Dra. Ríos lo expresó con claridad: el código inseguro es código irresponsable.
+          </p>
+
+          <div class="ethics-grid">
+            <div class="ethics-item">
+              <h4 data-i18n="ethics1_title">Inteligencia Artificial</h4>
+              <p data-i18n="ethics1_desc">La IA se integra en interfaces de juego y en sistemas de detección de amenazas. Su uso debe ser transparente: los usuarios tienen derecho a saber cuándo una IA toma decisiones que los afectan.</p>
+            </div>
+            <div class="ethics-item">
+              <h4 data-i18n="ethics2_title">Uso Responsable de Datos</h4>
+              <p data-i18n="ethics2_desc">Los sistemas modernos recopilan datos de comportamiento. La pregunta ética es siempre la misma: ¿el usuario consintió? ¿Los datos están protegidos? La privacidad es un derecho, no un lujo.</p>
+            </div>
+            <div class="ethics-item">
+              <h4 data-i18n="ethics3_title">Automatización</h4>
+              <p data-i18n="ethics3_desc">La automatización de pruebas de seguridad y la generación de UI son una revolución en productividad. Pero la automatización sin supervisión puede escalar errores a velocidades imposibles de controlar.</p>
+            </div>
+            <div class="ethics-item">
+              <h4 data-i18n="ethics4_title">Impacto Social</h4>
+              <p data-i18n="ethics4_desc">Colombia 5.0 demostró que nuestra industria TIC puede construir tecnología de clase mundial. Ese poder viene con responsabilidad: el software que hacemos afecta a 50 millones de personas.</p>
+            </div>
+            <div class="ethics-item">
+              <h4 data-i18n="ethics5_title">Responsabilidad Profesional</h4>
+              <p data-i18n="ethics5_desc">Un ingeniero que ignora la seguridad es como un arquitecto que ignora los códigos de construcción. Como profesionales, tenemos la obligación de cuestionar requisitos que pongan en riesgo a los usuarios.</p>
+            </div>
+          </div>
+
+          <div class="quote-block">
+            <p data-i18n="quote_es">"Colombia 5.0 no fue solo un evento de tecnología. Fue un recordatorio de que detrás de cada línea de código hay personas que confían en nosotros. Esa confianza es el mayor privilegio y la mayor responsabilidad de quienes elegimos esta profesión."</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- INGLÉS -->
+      <div class="lang-content observe" data-lang="concl-en">
+        <div class="conclusion-block" style="margin-top: 1.5rem;">
+          <h3 class="concl-question">How is ethics implemented in business technology?</h3>
+
+          <p class="concl-p-main">
+            Colombia 5.0 left us with a certainty that goes beyond tools and programming languages: <strong style="color: var(--amarillo);">technology without ethics is simply power without accountability</strong>. The two conferences I attended—on Game UI Systems and Application Cybersecurity—touched, from different angles, the same fundamental point.
+          </p>
+
+          <p class="concl-p-sec">
+            In video game interface design, accessibility has stopped being an option and become an imperative. When a poorly designed interface excludes people with color blindness, motor, or cognitive disabilities, it is not a programming error—it is an ethical failure.
+          </p>
+
+          <p class="concl-p-sec">
+            In cybersecurity, the reflection is even more urgent. Every application we develop stores real data of real people: addresses, medical information, financial data. Dr. Ríos said it clearly: insecure code is irresponsible code.
+          </p>
+
+          <div class="ethics-grid">
+            <div class="ethics-item">
+              <h4>Artificial Intelligence</h4>
+              <p>AI is integrated into game interfaces and threat detection systems. Its use must be transparent: users have the right to know when an AI makes decisions that affect them.</p>
+            </div>
+            <div class="ethics-item">
+              <h4>Responsible Data Use</h4>
+              <p>Modern systems collect user behavior data. The ethical question is always the same: did the user consent? Is the data protected? Privacy is a right, not a luxury.</p>
+            </div>
+            <div class="ethics-item">
+              <h4>Automation</h4>
+              <p>Automation of security testing and UI generation is a productivity revolution. But automation without oversight can scale errors at speeds impossible to control manually.</p>
+            </div>
+            <div class="ethics-item">
+              <h4>Social Impact</h4>
+              <p>Colombia 5.0 showed that our ICT industry can build world-class technology. That power comes with responsibility: the software we build affects 50 million people.</p>
+            </div>
+            <div class="ethics-item">
+              <h4>Professional Responsibility</h4>
+              <p>A software engineer who ignores security is like an architect who ignores building codes. As professionals, we have the obligation to question requirements that put users at risk.</p>
+            </div>
+          </div>
+
+          <div class="quote-block">
+            <p data-i18n="quote_en">"Colombia 5.0 was not just a technology event. It was a reminder that behind every line of code there are people who trust us. That trust is the greatest privilege and the greatest responsibility of those who choose this profession."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ══ -->
+  <footer>
+    <div class="footer-logo">COLOMBIA 5.0</div>
+    <div class="footer-flags">
+      <div class="flag-stripe flag-yellow"></div>
+      <div class="flag-stripe flag-blue"></div>
+      <div class="flag-stripe flag-red"></div>
+    </div>
+    <p class="footer_copy" data-i18n="footer_copy">© 2026 Colombia 5.0 · Sitio desarrollado con HTML, CSS y JavaScript · SENA - Centro de Manufactura en Textil y Cuero - Jean Carlos Alejandro Araujo Pacheco</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
